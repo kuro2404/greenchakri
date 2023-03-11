@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "../store/GlobalState";
 import { postData } from "../utils/fetchData";
 import Cookie from "js-cookie";
-import HeaderText from "../components/HeaderText";
 import { useRouter } from "next/router";
 
 function login() {

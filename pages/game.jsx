@@ -168,7 +168,6 @@ function game() {
           <img
             src="https://res.cloudinary.com/dxcer6hbg/image/upload/v1675103735/uxo6d30fdtolymvu27kt.png"
             alt="button"
-            onClick={() => handleChange()}
             style={{
               cursor: "pointer",
               position: "absolute",
