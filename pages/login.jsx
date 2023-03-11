@@ -44,74 +44,81 @@ function login() {
 
   return (
     <body className="w-screen h-screen relative">
-      <video
-        src="/video1.mp4"
-        className="absolute  w-screen"
-        autoPlay={true}
-        muted
-        loop
+      <img
+        src="/video.jpeg"
+        className="absolute  w-full h-full object-cover"
+        // autoPlay={true}
+        // muted
+        // loop
       />
-      <div className="h-full w-full absolute opacity-75 bg-black"></div>
+      <div className="h-full w-full absolute opacity-50 bg-black"></div>
       <div className="h-[20%]"> hi</div>
-      <div className="flex justify-around absolute h-full">
-        <div className="w-1/3 text-3xl  text-center text-white ">
-          <h4 className="bg-[#130326] rounded-2xl">
+      <div className="absolute ml-[10%] mt-[30%] text-white text-2xl">
+          🔞 Meant for Amusement only!
+          </div>
+      <div className="flex justify-around absolute h-[80%]">
+        <div className="w-1/3 text-2xl  text-center text-white ">
+          <h4 className="bg-[#130326] text-xl rounded-2xl p-10">
             #Register and PLAY FOR FREE #Get 100 Free chips on every login
             #Great PRIZES and GIFTS to be won on surprise competition. #NO
             DEPOSIT (or) any charges required to play on the app.
           </h4>
+          
         </div>
-        <div className="w-1/3 ">
-          <form
-            className="bg-[#130326]  shadow-md mt-[50%] py-2 w-full "
-            onSubmit={handleSubmit}
-          >
-            <div className="px-4 ">
-              <label
-                className="block text-white font-bold p-2 text-sm "
-                htmlFor="username"
-              >
-                Username
-              </label>
-              <input
-                className="shadow appearance-none  rounded w-full py-2 px-2 bg-black text-white leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
-                name="userName"
-                value={userName}
-                onChange={handleChangeInput}
-                type="text"
-                placeholder="Username"
-              />
-            </div>
-            <div className="px-4">
-              <label
-                className="block text-white  text-sm font-bold p-2"
-                htmlFor="password"
-              >
-                Password
-              </label>
-              <input
-                className="shadow appearance-none   rounded w-full py-2 px-3 bg-black text-white -700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                id="password"
-                type="password"
-                name="password"
-                value={password}
-                onChange={handleChangeInput}
-                placeholder="******************"
-              />
-            </div>
-            <div className="flex items-center justify-between w-1/2 ml-auto mr-auto">
-              <button
-                className="bg-[#811029] hover:bg-[#ae1536] w-full text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                Login
-              </button>
-            </div>
-          </form>
-          <p className="text-center text-white  text-xs">
-            &copy;Chakri - Deltin Royale Games
-          </p>
+        <div className="w-1/3">
+          <div className="h-1/5"></div>
+          <div className="h-1/3 w-full">
+            <form
+              className="bg-[#130326] rounded-2xl  shadow-md  p-4 w-full "
+              onSubmit={handleSubmit}
+            >
+              <div className="pt-4 ">
+                <label
+                  className="block text-white  font-bold pb-4 text-2xl "
+                  htmlFor="username"
+                >
+                  Username
+                </label>
+                <input
+                  className="shadow appearance-none  rounded w-full text-2xl p-2 bg-black text-white  leading-tight focus:outline-none focus:shadow-outline"
+                  id="username"
+                  name="userName"
+                  value={userName}
+                  onChange={handleChangeInput}
+                  type="text"
+                  placeholder="Username"
+                />
+              </div>
+              <div className="py-4">
+                <label
+                  className="block text-white  text-2xl font-bold py-2"
+                  htmlFor="password"
+                >
+                  Password
+                </label>
+                <input
+                  className="shadow appearance-none text-2xl  rounded w-full py-2 px-3 bg-black text-white  leading-tight focus:outline-none focus:shadow-outline"
+                  id="password"
+                  type="password"
+                  name="password"
+                  value={password}
+                  onChange={handleChangeInput}
+                  placeholder="******************"
+                />
+              </div>
+              <div className="flex items-center justify-between w-1/2 ml-auto mr-auto">
+                <button
+                  className="bg-[#811029] hover:bg-[#ae1536] w-full text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+            <p className="text-center text-white  text-xs">
+              &copy;Chakri - Deltin Royale Games
+            </p>
+          </div>
         </div>
       </div>
     </body>
