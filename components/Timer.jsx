@@ -7,8 +7,15 @@ export default function Time() {
     const [time, setTime] = useState(new Date());
     const { state, dispatch } = useContext(DataContext)
     const { auth } = state
+    const [userName, setUserName] = useState("");
 
-    
+    useEffect(() => {
+        if (auth && auth.user && auth.user.userName) {
+          setUserName(auth.user.userName);
+        }
+        console.log(userName, "this is my user bitch")
+      }, [auth]);
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTime(new Date());
@@ -37,7 +44,7 @@ export default function Time() {
         <div className=" border-2 flex border-white  overflow-hidden w-full mt-auto rounded-lg text-center ">
         <img src="/account.png" className="h-[20%]  w-[20%]" />
         {/* <h1 className="text-white my-auto ml-auto mr-auto font-bold">{auth.user.userName.substring(0, 7)}</h1> */}   
-        <h1 className="text-white my-auto ml-auto mr-auto font-bold">{auth.user?.userName.substring(0, 7)}</h1>
+        <h1 className="text-white my-auto ml-auto mr-auto font-bold">{userName}</h1>
 
          </div>
         <div className=" mt-[11%] ml-[51%] ">
